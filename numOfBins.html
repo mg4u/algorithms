@@ -1,0 +1,34 @@
+<script type="text/javascript">
+	function numOfBins(weight, c) 
+	{ 
+		if(weight.length==0){
+			return 0;
+		}
+
+		let res = 1//first bin
+		let bin_space = c; //first bin is empty, it will keeps up till it can not fill with the next weight so we add new bin
+		// Place items one by one 
+		for (let i = 0; i < weight.length; i++) 
+		{ 
+		    // If this item can't fit in current bin 
+		    if (weight[i] > bin_space) 
+		    { 
+		        res++; // Use a new bin 
+		        bin_space = c - weight[i]; 
+		    } 
+		    else
+		    {
+		        bin_space -= weight[i]; 
+		    }
+		} 
+		return res; 
+	} 
+let weight = [4, 8, 1, 4, 2, 1]; 
+let c = 10; 
+let binsRequired=numOfBins(weight, c)
+console.log('binsRequired',binsRequired)
+
+weight = [2, 5, 4, 7, 1, 3, 6]; 
+binsRequired=numOfBins(weight, c)
+console.log('binsRequired',binsRequired)
+</script>

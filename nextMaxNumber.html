@@ -4,7 +4,7 @@
 function getNextMaxNumber(number){
 	//1- desc sort after converting to array
 	let numberParts=number.toString().split('')
-	// console.log(numberParts)
+	console.log(number)
 	//2- ensure that the number is not the biggest number in this digit set
 	let biggestNumberParts=numberParts.sort(function(a,b){return b-a})
 	let biggestNumber=biggestNumberParts.join('')
@@ -16,7 +16,7 @@ function getNextMaxNumber(number){
 	let rotateAt=-1
 	let rotateWith=-1
 	for (var i = numberParts.length - 1; i >= 0; i--) {
-		console.log('numberParts[i]>numberParts[i-1]',numberParts[i],numberParts[i-1])
+		// console.log('numberParts[i]>numberParts[i-1]',numberParts[i],numberParts[i-1])
 		//2- get the number to rotate from,ex 45 be 54 
 		if(numberParts[i]>numberParts[i-1]){
 			rotateAt=i-1
@@ -33,7 +33,7 @@ function getNextMaxNumber(number){
 			break;
 		}
 	};
-	console.log('returnNumberParts',returnNumberParts.join(""))
+	// console.log('returnNumberParts',returnNumberParts.join(""))
 	return returnNumberParts.join("");
 }
 let result=getNextMaxNumber(12345)

@@ -1,17 +1,5 @@
 
 <script type="text/javascript">
-//get cellphons
-var cellPhonsGrid=[
-	[0,0,0,1,1,0,0],
-	[0,1,0,0,1,1,0],
-	[1,1,0,1,0,0,1],
-	[0,0,0,0,0,1,0],
-	[1,1,0,0,0,0,0],
-	[0,0,0,1,0,0,0]
-]
-function getcellPhones () {
-
-<script type="text/javascript">
 	//get cellphons
 	var cellPhonsGrid=[
 		[0,0,0,1,1,0,0],
@@ -34,8 +22,8 @@ function getcellPhones () {
 					for (var x = Math.max(i-1,0); x <= Math.min(i+1,cellPhonsGrid.length-1); x++) {
 						for (var y = Math.max(j-1,0); y <= Math.min(j+1,cellPhonsGrid[i].length-1); y++) {
 							if(cellPhonsGrid[x][y]==1){
-							console.log(i,j,'=>',x,y)
-							console.log(i,j,'=>')
+								// console.log(i,j,'=>',x,y)
+								// console.log(i,j,'=>')
 								newMaxRegion.push(x+','+y)
 								cellPhonsGrid[x][y]=0
 								maxRegion++
@@ -52,8 +40,4 @@ function getcellPhones () {
 		console.log(maxRegins)
 	}
 	getcellPhones()
-</script>
-
-}
-getcellPhones()
 </script>

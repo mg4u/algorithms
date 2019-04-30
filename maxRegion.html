@@ -20,11 +20,12 @@
 					// console.log(i,j,'=>')
 					newMaxRegion.push(x+','+y)
 					cellPhonsGrid[x][y]=0
-					maxRegion++
-					maxRegion+=getNexMaxRegion(i,j)
+					//maxRegion++
+					maxRegion+=getNexMaxRegion(x,y)
 				}
 			}
 		}
+		console.log(newMaxRegion)
 		return maxRegion
 	}
 	function getcellPhones () {

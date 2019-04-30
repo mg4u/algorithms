@@ -20,12 +20,11 @@
 					// console.log(i,j,'=>')
 					newMaxRegion.push(x+','+y)
 					cellPhonsGrid[x][y]=0
-					//maxRegion++
 					maxRegion+=getNexMaxRegion(x,y)
 				}
 			}
 		}
-		console.log(newMaxRegion)
+		// console.log(newMaxRegion)
 		return maxRegion
 	}
 	function getcellPhones () {
@@ -34,26 +33,10 @@
 			for (var j = 0; j < cellPhonsGrid[i].length; j++) {
 				newMaxRegion=[]
 				if(cellPhonsGrid[i][j]==1){
-					maxRegion=1
 					cellPhonsGrid[i][j]=0
-					newMaxRegion.push(i+','+j)
-					//get around cell towers around this		
-					/*for (var x = Math.max(i-1,0); x <= Math.min(i+1,cellPhonsGrid.length-1); x++) {
-						for (var y = Math.max(j-1,0); y <= Math.min(j+1,cellPhonsGrid[i].length-1); y++) {
-							if(cellPhonsGrid[x][y]==1){
-								// console.log(i,j,'=>',x,y)
-								// console.log(i,j,'=>')
-								newMaxRegion.push(x+','+y)
-								cellPhonsGrid[x][y]=0
-								maxRegion++
-							}
-						}
-					};
-					// break*/
 					let origin= i+','+j
 					maxRegion=getNexMaxRegion(i,j)
 					maxRegins.push({origin:origin,maxRegion:maxRegion})
-					// maxRegins.push(newMaxRegion)
 				}
 			}
 		}

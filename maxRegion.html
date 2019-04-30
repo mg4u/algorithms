@@ -11,6 +11,49 @@ var cellPhonsGrid=[
 ]
 function getcellPhones () {
 
+<script type="text/javascript">
+	//get cellphons
+	var cellPhonsGrid=[
+		[0,0,0,1,1,0,0],
+		[0,1,0,0,1,1,0],
+		[1,1,0,1,0,0,1],
+		[0,0,0,0,0,1,0],
+		[1,1,0,0,0,0,0],
+		[0,0,0,1,0,0,0]
+	]
+	function getcellPhones () {
+		let maxRegins=[],maxRegion=0,newMaxRegion=[]
+		for (var i = 0; i < cellPhonsGrid.length; i++) {
+			for (var j = 0; j < cellPhonsGrid[i].length; j++) {
+				newMaxRegion=[]
+				if(cellPhonsGrid[i][j]==1){
+					maxRegion=1
+					cellPhonsGrid[i][j]=0
+					newMaxRegion.push(i+','+j)
+					//get around cell towers around this		
+					for (var x = Math.max(i-1,0); x <= Math.min(i+1,cellPhonsGrid.length-1); x++) {
+						for (var y = Math.max(j-1,0); y <= Math.min(j+1,cellPhonsGrid[i].length-1); y++) {
+							if(cellPhonsGrid[x][y]==1){
+							console.log(i,j,'=>',x,y)
+							console.log(i,j,'=>')
+								newMaxRegion.push(x+','+y)
+								cellPhonsGrid[x][y]=0
+								maxRegion++
+							}
+						}
+					};
+					// break
+					// maxRegion=getMaxRegion(i,j)
+					// maxRegins.push(maxRegion)
+					maxRegins.push(newMaxRegion)
+				}
+			}
+		}
+		console.log(maxRegins)
+	}
+	getcellPhones()
+</script>
+
 }
 getcellPhones()
 </script>

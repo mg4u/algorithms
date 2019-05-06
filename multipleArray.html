@@ -8,5 +8,20 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 
 Eng: Mahmoud Gamal
 */
+function getMultipleArray (inputArray) {
+	let outputArray=[],value=1
+	for (var i = 0; i < inputArray.length; i++) {
+		value=1
+		for (var j = 0; j < inputArray.length; j++) {
+			if(i==j) continue;
+			value= inputArray[i]*inputArray[j]
+		};
+		outputArray.push(value)
+	};
 
+	console.log(outputArray)
+}
+
+let res=getMultipleArray([1, 2, 3, 4, 5])
+res=getMultipleArray([2, 3, 6])
 </script>

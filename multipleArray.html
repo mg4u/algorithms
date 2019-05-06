@@ -14,7 +14,7 @@ function getMultipleArray (inputArray) {
 		value=1
 		for (var j = 0; j < inputArray.length; j++) {
 			if(i==j) continue;
-			value= inputArray[i]*inputArray[j]
+			value*= inputArray[j]
 		};
 		outputArray.push(value)
 	};
@@ -23,5 +23,6 @@ function getMultipleArray (inputArray) {
 }
 
 let res=getMultipleArray([1, 2, 3, 4, 5])
+res=getMultipleArray([3, 2, 1])
 res=getMultipleArray([2, 3, 6])
 </script>

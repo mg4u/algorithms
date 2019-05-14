@@ -45,14 +45,15 @@ function getPossibilities (n) {
 		for (var k=moves;k<n;k++){
 			pos.push(1)
 		}
-		console.log(pos)
+
+		// 4- push the pos
+		// console.log(pos)
 		if(allPosps.indexOf(pos.join(','))==-1){
 			allPosps.push(pos.join(','))
 		}
 		reversedPos=pos.reverse()
-		console.log(reversedPos)
+		// console.log(reversedPos)
 		
-		// 4- push the pos
 		
 		if(allPosps.indexOf(reversedPos.join(','))==-1){
 			allPosps.push(reversedPos.join(','))
@@ -62,5 +63,5 @@ function getPossibilities (n) {
 	console.log(allPosps)
 }
 
-getPossibilities(4)
+getPossibilities(5)
 </script>

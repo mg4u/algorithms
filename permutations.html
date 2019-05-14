@@ -1,0 +1,39 @@
+<script type="text/javascript">
+/*
+Solved By : Mahmoud Gamal
+
+*/	
+function getPosp (n) {
+	let allPosps=[]
+
+	for (var i = 1; i <= n; i++) {
+		let pos=[]
+		let moves=0
+		//if(i>2){
+			if(i%2==1){
+				pos.push(1)
+				moves++
+			}else{
+				pos.push(2)
+				moves+=2
+			}
+		//}
+		// console.log(i,moves,pos)
+		for(var j=i+1;j <n;j+=2){
+			if(moves<n){
+				pos.push(2)
+				moves+=2
+			}
+		}
+		// console.log(i,moves,pos)
+		for (var k=moves;k<n;k++){
+			pos.push(1)
+		}
+
+		console.log(pos)
+		
+	};
+}
+
+getPosp(5)
+</script>

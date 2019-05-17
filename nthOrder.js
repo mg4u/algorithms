@@ -8,14 +8,28 @@ get_last(i): gets the ith last element from the log. i is guaranteed to be small
 You should be as efficient with time and space as possible.
 
 Solver By Mahmoud Gamal
+solution based on stack data structure
 */
-var log=[]
-function record (order_id) {
-	log.unshift(order_id)
-	console.log(log)
+// var log=[]
+class OrderLog{
+	constructor(){
+		this.log=[]
+	}
+	record (order_id) {
+		//make last orders alwasye in the top
+		this.log.unshift(order_id)
+	}
+
+	get_last(number){
+		var result=this.log.slice(0,number)
+		console.log(result)
+	}
 }
+var orderObj=new OrderLog
+orderObj.record(12)
+orderObj.record(13)
+orderObj.record(15)
+orderObj.record(16)
+orderObj.record(17)
 
-record(12)
-record(13)
-record(15)
-
+orderObj.get_last(3)

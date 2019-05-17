@@ -21,8 +21,7 @@ class OrderLog{
 	}
 
 	get_last(number){
-		var result=this.log.slice(0,number)
-		console.log(result)
+		return this.log.slice(0,number)
 	}
 }
 var orderObj=new OrderLog
@@ -32,4 +31,5 @@ orderObj.record(15)
 orderObj.record(16)
 orderObj.record(17)
 
-orderObj.get_last(3)
+var result=orderObj.get_last(3)
+console.log(result)

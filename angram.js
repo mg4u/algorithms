@@ -1,4 +1,3 @@
-<script type="text/javascript">
 //Mahmoud Gamal
 //get anagrams
 //2 string have the same strings wih same count in differet orders
@@ -35,4 +34,3 @@ let angramsPoss=findAnagrams("abab","ab")
 console.log('angramsPoss',angramsPoss)
 angramsPoss=findAnagrams("hello marllo","llo")
 console.log('angramsPoss',angramsPoss)
-</script>

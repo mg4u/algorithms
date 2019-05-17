@@ -9,4 +9,13 @@ You should be as efficient with time and space as possible.
 
 Solver By Mahmoud Gamal
 */
+var log=[]
+function record (order_id) {
+	log.unshift(order_id)
+	console.log(log)
+}
+
+record(12)
+record(13)
+record(15)
 

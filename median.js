@@ -59,7 +59,7 @@ function getRandom () {
 	return rand
 }
 var obj = new MedianFinder()
-// obj.addNum(getRandom())
+obj.addNum(getRandom())
 var param_2 = obj.findMedian()
 console.log('param_2',param_2)
 obj.addNum(getRandom())

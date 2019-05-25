@@ -9,6 +9,7 @@ var findAnagrams = function(s, p) {
 	chars=[],
 	indexs=[]
 	// console.log(sParts,p)
+
 	for (var i = 0; i < sParts.length; i++) {
 		chars=[]
 		checkP=p.split("")

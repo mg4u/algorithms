@@ -27,14 +27,14 @@ MedianFinder.prototype.findMedian = function() {
     uniArray=[]
     bigger=[],smaller=[],median=array[0];
     //make uniq aray
-    console.log('array',array)
+    // console.log('array',array)
 
     for(let i=0;i<array.length;i++){
     	if(uniArray.indexOf(array[i])>=0) continue;
     	uniArray.push(array[i])
     }
     uniArray=uniArray.sort((a,b) =>{ return a-b})
-    console.log('uniArray',uniArray,uniArray.length,(uniArray.length/2),(uniArray.length%2))
+    // console.log('uniArray',uniArray,uniArray.length,(uniArray.length/2),(uniArray.length%2))
     let center=0,center2=0
     console.log('center',center)
     if(uniArray.length==0){
@@ -44,7 +44,7 @@ MedianFinder.prototype.findMedian = function() {
     }else if(uniArray.length%2==0){
     	center=parseInt(uniArray.length/2)
     	center2=center-1
-    	console.log('uniArray[uniArray.length/2]+uniArray[(uniArray.length/2)+1]',uniArray[center2],uniArray[center])
+    	// console.log('uniArray[uniArray.length/2]+uniArray[(uniArray.length/2)+1]',uniArray[center2],uniArray[center])
     	centerVals=uniArray[center]+uniArray[(center2)]
     	return centerVals/2
     }else if(uniArray.length%2==1){

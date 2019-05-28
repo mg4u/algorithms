@@ -56,14 +56,11 @@ class LinkedList {
         }
 
         while (node.next) {
-            console.log(node.value,node.next.value)
-
             if (node.value < val && node.next.value >= val) {
                 let newNode = new Node()
                 newNode.value = val
                 newNode.next = node.next
                 node.next = newNode
-                // break;
                 return;
             } else {
                 node = node.next

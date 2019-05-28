@@ -1,3 +1,5 @@
+//Created sorted linked list
+
 class Node {
     constructor() {
         this.value = null;
@@ -52,32 +54,29 @@ class LinkedList {
             // console.log('head node',this.head)
             return;
         }
-        let addAfterLoop = true;
+
         while (node.next) {
             console.log(node.value,node.next.value)
-            // output.push(node.value)
+
             if (node.value < val && node.next.value >= val) {
-                addAfterLoop = false;
                 let newNode = new Node()
                 newNode.value = val
                 newNode.next = node.next
                 node.next = newNode
-                break;
+                // break;
+                return;
             } else {
                 node = node.next
             }
         }
-        // console.log('-------------- of val ',val,output)
-        if (addAfterLoop) {
-            console.log('addAfterLoop',val,addAfterLoop,node)
-            let newNode = new Node()
-            newNode.value = val
-            newNode.next = null
-            node.next = newNode
-        }
+
+        let newNode = new Node()
+        newNode.value = val
+        newNode.next = null
+        node.next = newNode
     }
 }
-console.log('Practice makes Perfect!');
+
 let ls = new LinkedList()
 
 ls.addToList(1)

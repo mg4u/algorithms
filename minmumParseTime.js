@@ -10,6 +10,7 @@ function minimumTime(numOfSubFiles, files){
       lastVal+=files[i]
       sums.push(lastVal);//+files[i])
     }
+    // console.log(sums)
     for (var i = sums.length - 1; i >= 0; i--) {
       minimumTime+=sums[i]
     };

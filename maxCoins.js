@@ -20,26 +20,36 @@ let matrix=[
 	[1, 5, 3, 1]
 ]
 let sum=0
-function getMaxSum (mat, x, y) {
-	for (var i = x; i < mat.length ; i++) {
-		for (var j = y; j < mat[0].length ; j++) {
-			sum+=mat[i][j]
-			//console.log('mat',mat[i][j])
-		}
+
+function getMaxSumToBottomRight (mat, x, y) {
+	var val=0
+	if (x >= mat.length || y >= mat[0].length){
+		return 0
+	} else{
+	    val= mat[x][y] +   
+	            Math.max( getMaxSumToBottomRight(mat, x + 1, y + 1), 
+	            getMaxSumToBottomRight(mat, x + 1, y),  
+	            getMaxSumToBottomRight(mat, x, y + 1) )
 	}
 
-	return sum
+	return val
 }
 
-function getMax (mat) {
-	let finalSum = 0
-	for (var i = 0; i < mat.length ; i++) {
-		for (var j = 0; j < mat[0].length ; j++) {
-			sum=0
-
-			finalSum = getMaxSum(mat, i, j)
-			console.log('finalSum',i,j,mat[i][j],finalSum)
-		}
+function getMaxSumToTopLeft (mat, x, y) {
+	var val=0
+	if (x < 0 || y < 0){
+		return 0
+	} else{
+	    val= mat[x][y] +   
+	            Math.max( getMaxSumToTopLeft(mat, x - 1, y - 1), 
+	            getMaxSumToTopLeft(mat, x - 1, y),  
+	            getMaxSumToTopLeft(mat, x, y - 1) )
 	}
+
+	return val
 }
-getMax(matrix)
+
+console.log(getMaxSumToBottomRight(matrix,0,0)) // allowed directions are right and bottom
+let sX=matrix.length-1
+let sY=matrix[0].length-1
+console.log(getMaxSumToTopLeft(matrix,sX,sY)) // allowed directions are right and bottom

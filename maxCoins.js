@@ -49,6 +49,8 @@ function getMaxSumToTopLeft (mat, x, y) {
 	return val
 }
 
+
+
 console.log(getMaxSumToBottomRight(matrix,0,0)) // allowed directions are right and bottom
 let sX=matrix.length-1
 let sY=matrix[0].length-1

@@ -1,3 +1,4 @@
+// Developed By: Mahmoud Gamal
 	//get median
 var MedianFinder = function() {
     this.array= [];

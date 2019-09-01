@@ -1,4 +1,5 @@
 // Asked by amazone
+// Developed By: Mahmoud Gamal
 // get minmum time required to parse streaming files using 2 files per time
 // assume file size is 8,4,6,12 the the minmum time required is 58
 // where 6+4 produce file with size => [10]

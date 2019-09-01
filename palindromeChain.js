@@ -1,4 +1,5 @@
 //how many times required to trasfer number summed with its revered to be palindrome
+//Developed By: Mahmoud Gamal
 
 function palindrome(s){
 	s= s.split('')

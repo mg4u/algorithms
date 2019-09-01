@@ -1,4 +1,4 @@
-//Mahmoud Gamal
+//Developed By: Mahmoud Gamal
 //get anagrams
 //2 string have the same strings wih same count in differet orders
 //Same approach of a sliding window moving on array

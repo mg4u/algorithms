@@ -1,3 +1,7 @@
+/*
+Developed By: Mahmoud Gamal
+GET All combination strings from given string
+*/
 function getSubSequences(s) {
     //get sub strigs
     let arrayOfStrings = []

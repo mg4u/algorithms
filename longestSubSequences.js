@@ -1,6 +1,10 @@
-import {getSubSequences} from './getSubSequences.js'
+/*
+ Developed By: Mahmoud Gamal
+ GET common string length from All combination strings from given 2 strings
+*/
+
+import {getSubSequences} from './getSubSequences.js' // avaliable in the same repo
 function longestSubsequence(x, y) {
-    // Write your code here
     // 1- get subsequence of string x
     let subSequences1 = getSubSequences(x);
     // console.log('subSequences1',subSequences1)

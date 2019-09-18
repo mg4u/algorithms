@@ -13,45 +13,42 @@ For example, given n = 16, return 3 since we can make it with a 10¢, a 5¢, and
 */
 
 function getCoinNum(amount, coin) {
-    console.log('start ', coin , amount);
     
     if (amount < coin) {
-        return 0
+        return { num: 0, amount}
     }
-    let num = amount/coin
-    let mod = amount%coin
-
-    // console.log('num', num);
-    // console.log('num', Math.floor(num));
-    // console.log('mod', mod);
-    return Math.floor(num)
+    let num = Math.floor( amount/coin )
+    amount = amount -  num * coin
+    return {num, amount}
 }
 
 function getCoins(amount) {
     // how many 25
     let coins25= getCoinNum(amount, 25)
-    console.log('coins 25', coins25);
+    console.log('coins 25', coins25.num );
     
-    amount = amount - (coins25 * 25)
+    amount = coins25.amount
 
     // how many 10
     let coins10= getCoinNum(amount, 10)
-    console.log('coins 10', coins10);
+    console.log('coins 10', coins10.num );
     
-    amount = amount - (coins10 * 10)
+    amount = coins10.amount
 
     // how many 5
     let coins5= getCoinNum(amount, 5)
-    console.log('coins 5', coins5);
+    console.log('coins 5', coins5.num );
     
-    amount = amount - (coins5 * 5)
+    amount = coins5.amount
 
     // how many 1
     let coins1= getCoinNum(amount, 1)
-    console.log('coins 1', coins1);
+    console.log('coins 1', coins1.num );
     
-    amount = amount - (coins1 * 1)
+    amount = coins1.amount
 
+    return coins25.num + coins10.num + coins5.num + coins1.num
 }
 
-getCoins (16)
+const minCoins = getCoins (550)
+console.log('minCoins ', minCoins);

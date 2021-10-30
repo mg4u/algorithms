@@ -1,6 +1,6 @@
 /*
 
-Developeed By MAhmoud Gamal
+Developeed By Mahmoud Gamal
 
 This problem was asked by Google.
 

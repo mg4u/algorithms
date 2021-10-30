@@ -17,7 +17,6 @@ function getSetOfSets(ls) {
         const e = ls[i].toString();
         output.push([e])
         let s= e
-        let push = false
         for (let j = i+1; j < ls.length; j++) {
             const e2 = ls[j].toString();
             output.push([e,e2])
